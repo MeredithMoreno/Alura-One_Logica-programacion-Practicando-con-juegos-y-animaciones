@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+ 
+<script>
+	//recuperamos el canvas y lo insertamoso en una variable llamada pantalla
+	var pantalla = document.querySelector("canvas");
+	//asi mismo creamos una variable para dibujar en dicho canvas en 2d
+	var pincel = pantalla.getContext("2d");
+	//Este es el fragmento de un cuadrado
+	pincel.fillStyle = "lightgrey"; //asignamos color al pincel
+	pincel.fillRect(0,0,600,400); //posicionamos el pincel en el canvas, desde el punto 0,0 a la cordenada final del canvas
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "green"; //asignamos color al pincel
+	pincel.fillRect(0,0,200,400);
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "white"; //asignamos color al pincel
+	pincel.fillRect(200,0,200,400);
+    //Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "red"; //asignamos color al pincel
+	pincel.fillRect(400,0,200,400);
+
+	 //Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "yellow"; //asignamos color al pincel
+	pincel.beginPath();
+	pincel.moveTo(300,200);//indicamos al pincel que se posicione al centro del canvas
+	pincel.lineTo(200,400);//ahora dibuja una linea hacia el punto con la coordenada 200,400
+	pincel.lineTo(400,400); //depues dibuja otra linea hacia la coordenada 400,400, desde el punto original, posicionado en el central  
+	pincel.fill(); //ahora se pinta el contenido de dichas lineas
+
+	//para la circunferencia
+	pincel.fillStyle = "blue"; //asignamos color al pincel
+	pincel.beginPath();
+	pincel.arc(300,200,50,0,2*3.14);//indicamos al pincel que dibuje una circunferencia, los primero dos parametros son para el pinto inicial de la circunferencia.
+	//el tercer pareametro es para el radio de dicha circunferencia
+	//el cuarto parametro es para el angulo incial
+	//el quinto parametro es para el angulo final, en este caso es 2*3.14
+	pincel.fill(); //ahora se pinta el contenido de dichas lineas
+</script>

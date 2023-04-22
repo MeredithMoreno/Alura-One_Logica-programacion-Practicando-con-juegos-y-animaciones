@@ -1,0 +1,35 @@
+<canvas width="600" height="400"></canvas>
+ 
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "lightgrey"; 
+	pincel.fillRect(0,0,600,400); 
+	
+	function mostrarAlerta(evento){//funcion de alerta en los clic
+		var x= evento.pageX-pantalla.offsetLeft;//variable que guarda la pos en X de la pantalla, solo del canvas en cuestion, cuando se le da un clic a este
+		var y = evento.pageY-pantalla.offsetTop;//variable que guarda la pos en Y de la pantalla, solo del canvas en cuestion, cuando se le da un clic a este
+
+		console.log(evento);//funcion que muestra en consola del navegador la informacion del evento
+		//alert("Usted hizo un clic"); //alerta cuando das un clic
+		alert(x+","+y);
+	}
+
+	function dibujarCirculo(evento){
+		var x= evento.pageX-pantalla.offsetLeft;
+		var y = evento.pageY-pantalla.offsetTop;
+
+		pincel.fillStyle="purple";
+		pincel.beginPath();
+		pincel.arc(x,y,10,0,2*3.14);
+		pincel.fill();
+		console.log(x+","+y);
+	}
+	
+	pantalla.onclick = dibujarCirculo; 
+
+</script>
+
+
+

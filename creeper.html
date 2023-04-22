@@ -1,0 +1,27 @@
+<canvas width="350" height="300"></canvas>
+ 
+<script>
+	//recuperamos el canvas y lo insertamoso en una variable llamada pantalla
+	var pantalla = document.querySelector("canvas");
+	//asi mismo creamos una variable para dibujar en dicho canvas en 2d
+	var pincel = pantalla.getContext("2d");
+	//Este es el fragmento de un cuadrado
+	pincel.fillStyle = "green"; //asignamos color al pincel
+	pincel.fillRect(0,0,350,300); //posicionamos el pincel en el canvas, desde el punto 0,0 a la cordenada final del canvas
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "black"; //asignamos color al pincel
+	pincel.fillRect(40,40,90,90);
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "black"; //asignamos color al pincel
+	pincel.fillRect(220,40,90,90);
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "black"; //asignamos color al pincel
+	pincel.fillRect(130,130,90,120);
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "black"; //asignamos color al pincel
+	pincel.fillRect(80,180,50,125);
+	//Este es el fragmento de otro cuadrado
+	pincel.fillStyle = "black"; //asignamos color al pincel
+	pincel.fillRect(220,180,50,125);
+
+</script>

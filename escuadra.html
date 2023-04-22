@@ -1,0 +1,27 @@
+<canvas width="600" height="400"></canvas>
+ 
+<script>
+	//recuperamos el canvas y lo insertamoso en una variable llamada pantalla
+	var pantalla = document.querySelector("canvas");
+	//asi mismo creamos una variable para dibujar en dicho canvas en 2d
+	var pincel = pantalla.getContext("2d");
+	
+
+	 //Este es el fragmento de un triangulo
+	pincel.fillStyle = "black"; //asignamos color al pincel
+	pincel.beginPath();
+	pincel.moveTo(50,50);//indicamos al pincel que se posicione al centro del canvas
+	pincel.lineTo(50,400);//ahora dibuja una linea hacia el punto con la coordenada 200,400
+	pincel.lineTo(400,400); //depues dibuja otra linea hacia la coordenada 400,400, desde el punto original, posicionado en el central  
+	pincel.fill(); //ahora se pinta el contenido de dichas lineas
+
+	//Este es el fragmento de un triangulo
+	pincel.fillStyle = "white"; //asignamos color al pincel
+	pincel.beginPath();
+	pincel.moveTo(100,175);//indicamos al pincel que se posicione al centro del canvas
+	pincel.lineTo(100,350);//ahora dibuja una linea hacia el punto con la coordenada 200,400
+	pincel.lineTo(275,350); //depues dibuja otra linea hacia la coordenada 400,400, desde el punto original, posicionado en el central  
+	pincel.fill(); //ahora se pinta el contenido de dichas lineas
+
+
+</script>

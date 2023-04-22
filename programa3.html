@@ -1,0 +1,29 @@
+<canvas width="600" height="400"></canvas>
+ 
+<script> 
+	function dibujarCuadrado(x,y,color){
+		var pantalla = document.querySelector("canvas");
+		var pincel = pantalla.getContext("2d");
+		//Este es el fragmento de un cuadrado
+		pincel.fillStyle = color; 
+		pincel.fillRect(x,y,50,50); //dibuja rectangulos
+		pincel.strokeStyle = "black"; //dibujamos un borde al cuadrado
+		pincel.strokeRect(x,y,50,50); //dibuja lineas
+	}
+	/*var i=0;
+	while(i<600){
+		dibujarCuadrado(i,0,"purple");
+		dibujarCuadrado(i,50,"lightblue");
+		dibujarCuadrado(i,100,"lightpink");
+		i=i+50;
+	}*/
+	
+	for(var i=0; i<600; i=i+50){
+		dibujarCuadrado(i,0,"purple");
+		dibujarCuadrado(i,50,"lightblue");
+		dibujarCuadrado(i,100,"lightpink");
+
+	}
+	
+
+</script> 
